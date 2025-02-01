@@ -1,13 +1,9 @@
-from collections import OrderedDict
-
 def popular_words (text, words):
     text_lst = text.lower().split()
-    ordered_dict = OrderedDict()
-    s = 0
+    new_dict = {}
     for w in words:
-        ordered_dict[words[s]] = text_lst.count(words[s])
-        s += 1
-    return ordered_dict
+        new_dict[w] = text_lst.count(w)
+    return new_dict
 
 
 assert (popular_words('''When I was One I had just begun When I was Two I was nearly new ''', ['i', 'was', 'three', 'near'])
